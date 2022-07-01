@@ -1,0 +1,22 @@
+<!-- <p>sidenavigation works!</p> -->
+<div class="side-nav">
+    <div class="side-header">
+        <span class="sidenav-user-container">
+            <mat-icon>person</mat-icon>
+            <span class="user-type" [innerHTML]="userType | titlecase | fontpipe"></span>
+        </span>
+        <span class="user-type" *ngIf="userType">{{dateToday | date:'medium'}}</span>
+    </div>
+    <div class="side-menu" fixedTopGap="250">
+        <mat-nav-list>
+            <mat-list>
+                <mat-list-item><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" routerLink="home">Home</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" routerLink="contact-us">Contact Us</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" routerLink="about-us">About Us</a></mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+        </mat-nav-list>
+    </div>
+</div>

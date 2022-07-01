@@ -1,0 +1,58 @@
+<!-- <p>header works!</p> -->
+<div class="header-container">
+  <mat-card>
+    <mat-card-title-group>
+      <button mat-icon-button (click)="toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-card-title-group class="logo">
+        <img mat-card-sm-image src="https://picsum.photos/200/300">
+      </mat-card-title-group>
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Demo Theme</mat-card-title>
+          <mat-card-subtitle>A new way</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      
+      <mat-card-actions align="end" class="header-button-container">
+        <button mat-button [matMenuTriggerFor]="homeMenu">
+          <mat-icon>home</mat-icon><span>Home</span>
+        </button>
+        
+        <button mat-button [matMenuTriggerFor]="aboutMenu">
+          <mat-icon>account_balance</mat-icon><span>About Us</span>
+        </button>
+        
+        <button mat-button>
+          <mat-icon>feedback</mat-icon><span>Feedback</span>
+        </button>
+        
+        <mat-menu #homeMenu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        
+        <mat-menu #aboutMenu="matMenu" xPosition="after">
+          <button mat-menu-item [matMenuTriggerFor]="contactMenu">
+            <mat-icon>call</mat-icon><span>Contact Us</span>
+          </button>
+          <button mat-menu-item [matMenuTriggerFor]="emailMenu">
+            <mat-icon>email</mat-icon><span>Email Us</span>
+          </button>
+        </mat-menu>
+        
+        <mat-menu #contactMenu="matMenu" xPosition="after">
+          <button>
+            <mat-icon>call</mat-icon><span> 0731 2399199</span>
+          </button>
+        </mat-menu>  
+        <mat-menu #emailMenu="matMenu" xPosition="after">
+          <button>
+            <mat-icon>alternate_email</mat-icon><span> abc@company.com</span>
+          </button>
+        </mat-menu>
+      </mat-card-actions>
+    </mat-card-title-group>
+  </mat-card>
+</div>

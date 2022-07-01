@@ -1,0 +1,17 @@
+/* mat-card {
+    margin-left: auto;
+}
+mat-card-title {
+    font-size: large;
+} */
+button {
+    border: 0;
+    height: fit-content;
+    cursor: pointer;
+}
+.header-button-container{
+    margin-left: auto;
+}
+.logo{
+    margin-left: 0.75%;
+}

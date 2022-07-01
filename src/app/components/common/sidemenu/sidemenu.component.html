@@ -1,0 +1,49 @@
+<!-- <p>sidemenu works!</p> -->
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="open">
+        <app-sidenavigation></app-sidenavigation>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!-- <mat-toolbar><span>My App</span></mat-toolbar> -->
+        <mat-toolbar>
+            <mat-toolbar-row class="menu-row">
+                <!-- This is the MAIN content -->
+                <app-header (toggleMenu)="receive($event)"></app-header>
+                <span>Row 2</span>
+                <button mat-button>
+                    Button 1
+                </button>
+                <button mat-button>
+                    Button 2
+                </button>
+                <div class="header-share">
+                    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                        <mat-icon>share</mat-icon>
+                    </button>
+                </div>
+                <div class="container-main-content">
+                    <router-outlet></router-outlet>
+                </div>
+            </mat-toolbar-row>            
+        </mat-toolbar>
+        <!-- <mat-toolbar-row>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>My App</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>share</mat-icon>
+            </button>
+        </mat-toolbar-row> -->
+        <!-- <app-header></app-header> -->
+        <!-- This is the MAIN content
+        <button (click)="this.toggle()">TOGGLE</button> -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

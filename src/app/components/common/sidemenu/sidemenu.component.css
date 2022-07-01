@@ -1,0 +1,12 @@
+mat-sidenav-container{
+    height: 100%;;
+}
+.header-share{
+    float: right;
+}
+.menu-row{
+    display: inline-block;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
